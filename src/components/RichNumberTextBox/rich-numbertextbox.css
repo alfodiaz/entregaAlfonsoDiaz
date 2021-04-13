@@ -1,0 +1,9 @@
+.numberTextBox {
+    min-width: 100px;
+    min-height: 25px;
+    border-width: 1px;
+    border-radius: 2px 5px;
+    border-color: grey;
+    padding: 15px;
+    font-size: medium;
+}
