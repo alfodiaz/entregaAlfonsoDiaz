@@ -6,6 +6,8 @@ import {
   Link
 } from "react-router-dom";
 
+import 'fontsource-roboto';
+
 
 import {Home} from "./components/home/Home";
 
