@@ -1,4 +1,4 @@
-import {indexDB,artists} from "../../api/db/indexedDb";
+import {artists} from "../../api/db/indexedDb";
 import React from "react";
 import "./rich-autocomplete.css";
 

@@ -2,7 +2,7 @@
 var indexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB || window.shimIndexedDB;
 export var artists = [];
 
-if(indexedDB != undefined){
+if(indexedDB !== undefined){
 
   // Open (or create) the database
   var open = indexedDB.open("ArtistDatabase", 1);
@@ -10,7 +10,6 @@ if(indexedDB != undefined){
   open.onupgradeneeded = function() {
       var db = open.result;
       var store = db.createObjectStore("ArtistStore", {keyPath: "id"});
-      var index = store.createIndex("NameIndex", ["name"]);
   };
   
   open.onsuccess = function() {
@@ -18,7 +17,6 @@ if(indexedDB != undefined){
       var db = open.result;
       var tx = db.transaction("ArtistStore", "readwrite");
       var store = tx.objectStore("ArtistStore");
-      var index = store.index("NameIndex");
   
       // Add some data
       store.put({id: 1, name: "Mick Jagger"});

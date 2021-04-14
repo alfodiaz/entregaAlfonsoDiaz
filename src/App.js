@@ -1,4 +1,4 @@
-import React,{ useState } from "react";
+import React from "react";
 import {
   BrowserRouter as Router,
   Switch,
@@ -11,7 +11,6 @@ import 'fontsource-roboto';
 
 import {Home} from "./components/home/Home";
 
-import { useSelector, useDispatch } from 'react-redux';
 
 
 
