@@ -52,7 +52,7 @@ export default class RichAutoComplete extends React.Component {
     return (
       <div className="srchList">
         <ul>
-          {suggestions.map((item) => <li onClick={() => this.suggestionSelected(item)}>{item}</li>)}
+          {suggestions.map((item) => <li key = {item} onClick={() => this.suggestionSelected(item)}>{item}</li>)}
         </ul>
       </div>
     );

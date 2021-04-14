@@ -1,5 +1,4 @@
-import React, { useState, useEffect, useReducer,useMemo} from 'react';
-import {indexDB,artists} from "../../api/db/indexedDb";
+import React from 'react';
 import RichAutoComplete from '../RichAutoComplete/RichAutoComplete';
 import RichButton from '../RichButton/RichButton';
 import RichNumberTextBox from '../RichNumberTextBox/RichNumberTextBox';
@@ -7,41 +6,12 @@ import RichTextBox from '../RichTextBox/RichTextBox';
 
 
 
-const initialArtists = [];
-function init(initialArtists){
-  return [];
-} 
 
-function reducer(state,action){
-  switch (action.type) {
-    case 'fill-autocomplete':
-      return artists;
-      
-    defauult:
-      return new Error();
-  }
-}
+
+
 
 
 export  function Home() {
-
-  // const [artists, setArtists] = useState([]);
-
-  const [state, dispatch] = useReducer(reducer, initialArtists, init);
-  const [loaded,setLoaded] = useState(false);
-  //const artistsMemo = useMemo(()=>artists,[]);
-
-   useEffect(()=>{
-      if(!loaded){   
-      dispatch({
-        type: 'fill-autocomplete',
-      });
-      setLoaded(true);
-    }
-  });
-
-  
-
   return (<>
   <div style={{padding: 20+"px"}}>
     <h2>Home</h2>

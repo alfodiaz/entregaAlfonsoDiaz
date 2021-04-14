@@ -7,10 +7,7 @@ if(indexedDB !== undefined){
   // Open (or create) the database
   var open = indexedDB.open("ArtistDatabase", 1);
   // Create the schema
-  open.onupgradeneeded = function() {
-      var db = open.result;
-      var store = db.createObjectStore("ArtistStore", {keyPath: "id"});
-  };
+  
   
   open.onsuccess = function() {
       // Start a new transaction
